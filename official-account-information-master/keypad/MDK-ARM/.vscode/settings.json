@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.lua": "lua",
+        "keypad.h": "c"
+    }
+}

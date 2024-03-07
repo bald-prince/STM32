@@ -1,0 +1,109 @@
+<wxs module="utils">
+module.exports.max = function(n1, n2) {
+  return Math.max(n1, n2)
+}
+module.exports.len = function(arr) {
+  arr = arr || []
+  return arr.length
+}
+
+
+
+</wxs>
+<!-- <button type="primary" bindtap="openBluetoothAdapter">开始扫描</button> -->
+<view class="top"></view>
+
+<!-- <button class="user" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button>  -->
+
+
+<view class="user">
+  <view class="avatar">
+    <!-- <open-data type="userAvatarUrl"></open-data> -->
+    <button class="user" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar" style="position: relative; left: -80rpx; top: -32rpx">
+  <image class="avatar2" src="{{avatarUrl}}"></image>
+</button> 
+  </view>
+  <view class="username">
+    <!-- <open-data type="userNickName"></open-data> -->
+    <input type="nickname" placeholder="小飞哥玩嵌入式"/>
+
+  </view>
+</view>
+
+<view class="search">
+  <view wx:if="{{!canWrite}}">搜索新设备</view>
+  <view wx:if="{{!canWrite}}" class="go"  bindtap="openBluetoothAdapter" hover-class="active" hover-stay-time="100">
+    <image wx:if="{{!canWrite}}" class="icon-go" src="/icons/go.png"></image>
+  </view>
+
+  <view wx:if="{{canWrite}}" class="" hover-stay-time="100">当前连接：</view>
+  <view wx:if="{{canWrite}}" class="bleName" >{{ name }}</view>
+</view>
+
+<view class="main" style="width: 690rpx; height: 773rpx; display: flex; box-sizing: border-box">
+  <!-- <view class="title">
+    <view class="">当前连接： <view class="bleName" >{{ name }}</view></view>
+   
+  </view  > -->
+  <view wx:if="{{!canWrite}}" class="title">已发现 {{devices.length}} 个蓝牙设备>></view>
+
+<view class="container1">
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="writeBLECharacteristicValue_Forward">前进</button>
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="writeBLECharacteristicValue_Back">后退</button>
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="writeBLECharacteristicValue_TurnLeft">左转</button>
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="writeBLECharacteristicValue_TurnRight">右转</button>
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="writeBLECharacteristicValue_Stop">停止</button>
+  <button type="primary" plain wx:if="{{canWrite}}" bindtap="closeBLEConnection">断开连接</button>
+  </view>
+
+
+  <scroll-view wx:if="{{!canWrite}}" view class="list" scroll-y scroll-with-animation style="width: 630rpx; height: 640rpx; display: block; box-sizing: border-box" hover-stay-time="100">
+  
+  
+    <view wx:for="{{devices}}" wx:key="index" data-device-id="{{item.deviceId}}" data-name="{{item.name || item.localName}}" class="btn" bindtap="createBLEConnection" class="result" hover-stay-time="100">
+      <view class="info">
+        <view class="name">
+          <image src="/icons/bluetooth.png"></image>
+          <view>{{ item.name || item.localName }}</view>
+        </view>
+        <view class="id">ID：{{ item.deviceId }}</view>
+        <view>RSSI：{{ item.RSSI }}</view>
+  
+      </view>
+      <view class="btn">
+        <image class="icon" src="/icons/go2.png"></image>
+        <view>连接</view>
+      </view>
+    </view>
+  
+    
+  
+    
+  
+    
+  
+    
+  </scroll-view>
+
+
+</view>
+
+<!-- <button type="primary" bindtap="stopBluetoothDevicesDiscovery">停止扫描</button>
+<button type="primary" bindtap="closeBluetoothAdapter">结束流程</button> -->
+
+
+<!-- <view class="connected_info" wx:if="{{connected}}">
+  <view>
+    <text>已连接到 {{name}}</text>
+    <view class="operation">
+    <button wx:if="{{canWrite}}" size="mini" bindtap="writeBLECharacteristicValue">写数据</button>
+    <button size="mini" bindtap="closeBLEConnection">断开连接</button>
+    </view>
+  </view>
+  <view wx:for="{{chs}}" wx:key="index" style="font-size: 12px; margin-top: 10px;">
+    <view>特性UUID: {{item.uuid}}</view>
+    <view>特性值: {{item.value}}</view>
+  </view>
+</view> -->

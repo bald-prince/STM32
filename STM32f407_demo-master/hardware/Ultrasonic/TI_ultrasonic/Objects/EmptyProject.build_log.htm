@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 nynb, 1, LIC=1WSCX-HDXM3-WJZ6K-ZBH7N-UWXZP-HT2ZI
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.21a
+Toolchain Path:  F:\KEIL_stm32\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      TI_XDS\XDS2CM3.dll V1.0.2.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+E:\keijob\MSP432_job\1_MY_FLY_EQP\External_Funtion\TI_ultrasonic\EmptyProject.uvprojx
+Project File Date:  07/28/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'F:\KEIL_stm32\ARM\ARMCC\Bin'
+Build target 'EmptyProject'
+compiling S_bus_Reci.c...
+Hardware\ultrasonic\S_bus_Reci.h(14): warning:  #1295-D: Deprecated declaration S_bus_init - give arg types
+  void S_bus_init();
+Hardware\ultrasonic\S_bus_Reci.h(15): warning:  #1295-D: Deprecated declaration S_Reci - give arg types
+  uint8_t S_Reci();
+Hardware\ultrasonic\S_bus_Reci.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+Hardware\ultrasonic\S_bus_Reci.c(40): warning:  #940-D: missing return statement at end of non-void function "S_Reci"
+  }
+Hardware\ultrasonic\S_bus_Reci.c: 4 warnings, 0 errors
+compiling main.c...
+My_tim.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\Hardware\ultrasonic\S_bus_Reci.h(14): warning:  #1295-D: Deprecated declaration S_bus_init - give arg types
+  void S_bus_init();
+.\Hardware\ultrasonic\S_bus_Reci.h(15): warning:  #1295-D: Deprecated declaration S_Reci - give arg types
+  uint8_t S_Reci();
+.\Hardware\ultrasonic\S_bus_Reci.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=3924 RO-data=464 RW-data=168 ZI-data=1968  
+FromELF: creating hex file...
+".\Objects\EmptyProject.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:DSP:1.4.6
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: DSP Version: 1.4.6
+   * Component: CORE Version: 4.3.0
+
+Package Vendor: TexasInstruments
+                http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/msp432cmsis/latest/exports/TexasInstruments.MSP432P4xx_DFP.3.2.6.pack
+                TexasInstruments::Device:Startup:3.2.2
+                Device Family Pack for Texas Instruments SimpleLink(TM) MSP432 Series
+   * Component: Startup Version: 3.2.2
+
+<h2>Collection of Component include folders:</h2>
+  E:\keijob\MSP432_job\1_MY_FLY_EQP\External_Funtion\TI_ultrasonic\RTE
+  F:\KEIL_stm32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  F:\KEIL_stm32\ARM\PACK\TexasInstruments\MSP432P4xx_DFP\3.2.6\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:DSP:1.4.6
+      Include file:  CMSIS\Include\arm_math.h
+      Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: TexasInstruments::Device:Startup:3.2.2
+      Source file:   Examples\BlinkLED\blinkLED.c
+      Source file:   Device\Source\startup_msp432p401r_uvision.s
+      Include file:  Device\Include\msp_compatibility.h
+      Source file:   Device\Source\system_msp432p401r.c
+      Source file:   Examples\EmptyMain\main.c
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>

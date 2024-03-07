@@ -1,0 +1,15 @@
+uart_circlequeuetest\event_groups.o: ..\Freertos\source\event_groups.c
+uart_circlequeuetest\event_groups.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\FreeRTOS.h
+uart_circlequeuetest\event_groups.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+uart_circlequeuetest\event_groups.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\source\FreeRTOSConfig.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\projdefs.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\portable.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\deprecated_definitions.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\portable\portmacro.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\mpu_wrappers.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\task.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\list.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\timers.h
+uart_circlequeuetest\event_groups.o: ..\Freertos\include\event_groups.h

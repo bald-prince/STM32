@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#efefef",
+        "navigationBarTitleText": " 智能小车控制系统",
+        "navigationBarTextStyle": "black",
+        "navigationStyle":"default",
+        "backgroundColor": "#000000"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

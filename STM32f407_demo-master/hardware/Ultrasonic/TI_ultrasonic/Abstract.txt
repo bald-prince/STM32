@@ -1,0 +1,11 @@
+Blinky for MPS432 LaunchPad
+
+Projects are configured for TI XDS-110ET emulator (on-board debug adapter), Keil ULINK2, ULINKpro and Segger J-Link.
+
+This program runs at a CPU speed of 48 MHz.
+
+For fastest operation and Serial Wire Viewer (SWV) use Keil ULINK2, ULINKpro, ULKINK-ME or J-Link.
+For SWV operation, make sure Port: is set to SW and not JTAG.
+
+This program uses TI Software Pack 2.2.0 or later.
+

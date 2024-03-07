@@ -1,0 +1,99 @@
+# For Android(Android studio)
+build
+*.iml
+.gradle
+.DS_Store
+/HostMonitor/BuildAndroid/local.properties
+/HostMonitor/BuildAndroid/.idea/gradle.xml
+/HostMonitor/BuildAndroid/.idea/workspace.xml
+/HostMonitor/BuildAndroid/.idea/libraries
+/HostMonitor/BuildAndroid/.idea/caches
+/HostMonitor/BuildAndroid/.idea/codeStyles
+/HostMonitor/BuildAndroid/build
+/HostMonitor/BuildAndroid/captures
+/HostMonitor/BuildAndroid/libs
+/HostMonitor/BuildAndroid/obj
+
+# For Windows(Visual stduio)
+.vs
+ipch
+*.suo
+Debug
+Release
+obj
+*.sdf
+*.opendb
+*.db
+*.dir
+*.user
+*.aps
+Generated Files
+AppPackages
+BundleArtifacts
+
+# For Linux(GCC)
+*.d
+*.o
+*.map
+*.mk  android jni need it.
+
+# For cmake
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+Makefile
+
+# For Xcode
+.DS_store
+*.swp
+*.lock
+profile
+xcuserdata
+
+# For Keil
+*.uvguix.*
+*.uvoptx
+*.lst
+*.dbgconf
+EventRecorderStub.scvd
+
+# For Qt
+.qmake.cache
+.qmake.stash
+Makefile*
+
+# For output
+ExternalWindow/X11/xWindow
+
+libUIcode.a
+snap_short.bmp
+
+/Hello3D/BuildLinux/Hello3D
+/Hello3Ddonut/BuildLinux/Hello3Ddonut
+/Hello3Dwave/BuildLinux/Hello3Dwave
+/HelloAnimation/BuildLinux/HelloAnimation
+/HelloAzureIoT/BuildAzurePnp/pnpGuiLite
+/HelloCircle/BuildLinux/HelloCircle
+/HelloFFmpeg/BuildLinux/HelloFFmpeg
+/HelloFreetype/BuildLinux/HelloFreetype
+/HelloFont/BuildLinux/HelloFont
+/HelloWindows/BuildLinux/HelloWindows
+/HelloJPG/BuildLinux/HelloJPG
+/HelloLayers/BuildLinux/HelloLayers
+/HelloMario/BuildLinux/HelloMario
+/HelloMolecule/BuildLinux/HelloMolecule
+/HelloNets/BuildLinux/HelloNets
+/HelloNoTouch/BuildLinux/HelloNoTouch
+/HelloParticle/BuildLinux/HelloParticle
+/HelloPendulum/BuildLinux/HelloPendulum
+/HelloScroll/BuildLinux/HelloScroll
+/HelloSlide/BuildLinux/HelloSlide
+/HelloStar/BuildLinux/HelloStar
+/HelloTimer/BuildLinux/HelloTimer
+/HelloTransparent/BuildLinux/HelloTransparent
+/HelloWave/BuildLinux/HelloWave
+/HelloWidgets/BuildLinux/HelloWidgets
+
+/HostMonitor/BuildMacCmd/HostMonitor
+/HostMonitor/BuildLinux/HostMonitor
+/HostMonitor/BuildGo/HostMonitor

@@ -1,0 +1,43 @@
+#include "stm32f10x.h"
+
+#define su1 A9
+#define su2 A8
+#define su3 B15
+#define su4 B14
+#define su5 B13
+#define su6 B12
+
+#define sd1 B0
+#define sd2 B1
+#define sd3 B10
+#define sd4 B11
+#define sd5 A10
+
+
+
+int main(void)
+{	
+  int i,j;
+	M_SysTick_Init();
+	
+	
+	
+	M_GPIO_Init(su1,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su2,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su3,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su4,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su5,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su6,GPIO_Mode_Out_PP);
+	
+	M_GPIO_Init(sd1,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd2,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd3,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd4,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd5,GPIO_Mode_Out_PP);
+	
+	while(1)
+	{
+		
+		for(i=0;i<67;i++)
+		{
+		C

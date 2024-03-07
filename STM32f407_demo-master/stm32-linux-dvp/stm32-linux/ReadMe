@@ -1,0 +1,85 @@
+//#############################################
+//The document was used to record my exp for devlopping the stm32 OC on the linux-sys(Ubuntu-16.04)
+//Step1:Repare for dev-env		
+	[ tips.1:You have to downloads the STM32CubeFxxx(due to yourself) on the web "ST" && also that you can get it from any thirdpart-company so on ]
+		[ 	->It's not necessary that the Cube you get from,but you have to get it which named "STM32F4xx_DSP_StdPeriph_Lib_V1.4.0" ]
+	[ tips.2:cd the dir of "STM32F4xx_DSP_StdPeriph_Lib_V1.4.0" then you'll find that there are four dictionary ]
+		[  2014/08/05  01:59    <DIR>          Libraries 							    ]
+		[  2014/07/17  21:52            17,797 MCD-ST Liberty SW License Agreement V2.pdf			    ]
+		[  2014/08/05  02:01    <DIR>          Project								    ]
+		[  2014/08/04  21:46            73,068 Release_Notes.html						    ]
+		[  2014/08/05  01:50        29,987,321 stm32f4xx_dsp_stdperiph_lib_um.chm			   	    ]
+		[  2017/03/13  21:43        10,350,918 stm32f4xx_dsp_stdperiph_lib_um.chw				    ]
+		[  2014/08/05  02:01    <DIR>          Utilities							    ]	
+		[  2014/08/05  01:57    <DIR>          _htmresc								    ]
+	[ tips.3:start_file such as "startup_stm32f40_41xxx.s"(I just use this one) ---> are in the dir<...\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\TrueSTUDIO> ]
+	[ tips.4:ld_file    such as ""(I have used another one) -----------------------> are in the dir<...\Project\STM32F4xx_StdPeriph_Templates\TrueSTUDIO\...]
+	[ tips.5:In Start.s,Systeminit() has been cited so that you have to get somefile from project which is running well]
+		[ 
+		  files--->:
+		  cmsis_armcc.h  
+		  core_cmInstr.h  
+		  stm32f4xx.h
+		  core_cm4.h     
+		  core_cmSimd.h   
+		  system_stm32f4xx.c  
+		  core_cmFunc.h  
+		  stm32f407xx.h   
+		  system_stm32f4xx.h
+ 		]		
+	[ tips.6:congragtuation!You have the all files needed by the pro then you need a compiler ]
+		[ I have foundv that arm-none-eabi work well than another one which I was used to.]< ensure the libc.a or libc.so in your compile-rootfs/lib >
+			[ office web for the Tool-Chain---->https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads]
+			[ for donloads--->url:https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update (I have used to compile the stm32 pro in linux)]
+	[ tips.7:You got the ToolChain and you transport it to your linux account then you need to set the env for the ToolChain by write the "/etc/bash.bashrc or /etc/profile ..."]
+		[ You can test if you install successful by typing "arm-" and press the key name "Tab" overlook if the cmd complete by itself ]
+	[ tips.8:Now you can try to compile your pro on linux-system ]
+		[ write a demo just light the led by registor(You can have a look what I had done) ]
+		[ I assume that you finish the demo so that you might have three files more then yet ]
+		[ eg: "main.c" "led.c" "led.h" (You can just use the value define in the "stm32f407xx.h" <"* My Board is STM32F407ZE *"> or somefile st support you )]
+		[ so that you need not to look for the registor address in the UserGuide and define it by yourself one by one ]
+		[ for compile,you can just use my script to compile or you want do it by yourself ]
+		[ Take care of this "In Cmsis_armcc.h" ]
+			[	#ifndef __NO_EMBEDDED_ASM
+				__attribute__((section(".rev16_text"))) __STATIC_INLINE /*__ASM*/ uint32_t __REV16(uint32_t value)
+				{
+				  __ASM("rev16 r0, r0");
+				  __ASM("bx lr");
+				}
+				#endif
+
+				/**
+				  \brief   Reverse byte order in signed short value
+				  \details Reverses the byte order in a signed short value with sign extension to integer.
+				  \param [in]    value  Value to reverse
+				  \return               Reversed value
+				 */
+				#ifndef __NO_EMBEDDED_ASM
+				__attribute__((section(".revsh_text"))) __STATIC_INLINE /*__ASM*/ int32_t __REVSH(int32_t value)
+				{
+				  __ASM("revsh r0, r0");
+				  __ASM("bx lr");
+				}
+				#endif
+			]
+		[ You should fix it just like me otherwise you will find the error would occure ]
+	[ tips.9:for Makefile script you have to care that "-Wl,--gc-sections" in "LD_FLAG" it will deslove the error "_exit"]
+	[ tips.10:openocd ----> for downloads the binary file to the board ]
+		[ use: openocd -f stm32f4Discovery.cfg ]
+		[ ->crtl + Alt + T -> telnet 0.0.0.0 4444<slience server port>]
+		[ reset halt    <if board can't halt by the cmd do it manu> ]
+		[ flash probe 0 <find the flash start address> ]
+		[ stm32f4 mass_erase 0]
+		[ flash write_bank 0(rank) <../*.bin> 0(offerset) ]
+		[telnet localhost 4444
+		 
+		>reset halt                         //要先挂起才能开始擦除
+		>flash erase_sector 0 0 last        //全部擦除
+		>flash write_image xxx.hex/bin/elf  //完成
+		>reset
+		或者
+		>halt
+		>flash write_image erase xxx.bin/hex/elf 0  //自动擦除并从0地址开始                   
+		>reset                                      //啦啦啦快看你的板子～
+		]
+//[ Thats all ]

@@ -1,0 +1,17 @@
+[
+ {
+  "path": "/packages/multimedia/u8g2/u8g2", 
+  "ver": "latest", 
+  "name": "U8G2"
+ }, 
+ {
+  "path": "/packages/system/fal", 
+  "ver": "v0.5.0", 
+  "name": "FAL"
+ }, 
+ {
+  "path": "/packages/peripherals/sensors/mpu6xxx", 
+  "ver": "latest", 
+  "name": "MPU6XXX"
+ }
+]

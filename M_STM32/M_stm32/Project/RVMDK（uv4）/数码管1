@@ -1,0 +1,158 @@
+
+
+#define su1 A9
+#define su2 A8 
+#define su3 B15
+#define su4 B14
+#define su5 B13
+#define su6 B12
+
+#define sd1 B0
+#define sd2 B1
+#define sd3 B10
+#define sd4 B11
+#define sd5 A10
+
+
+
+int main(void)
+{	
+  int i,j;
+	M_SysTick_Init();
+	
+	
+	
+	M_GPIO_Init(su1,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su2,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su3,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su4,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su5,GPIO_Mode_Out_PP);
+	M_GPIO_Init(su6,GPIO_Mode_Out_PP);
+	
+	M_GPIO_Init(sd1,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd2,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd3,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd4,GPIO_Mode_Out_PP);
+	M_GPIO_Init(sd5,GPIO_Mode_Out_PP);
+	
+	while(1)
+	{
+		
+		for(i=0;i<67;i++)
+		{
+		M_GPIO_Set(su1,LOW);
+		M_GPIO_Set(su4,HIGH);
+		M_GPIO_Set(su5,HIGH);
+		
+		M_GPIO_Set(su2,LOW);
+		M_GPIO_Set(su3,LOW);
+		M_GPIO_Set(su6,HIGH);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,LOW);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,LOW);
+		
+		M_Delay_ms(5);//1
+
+		
+		
+		
+		
+        M_GPIO_Set(su1,HIGH);
+		M_GPIO_Set(su4,HIGH);
+		M_GPIO_Set(su5,LOW);
+		
+		M_GPIO_Set(su2,HIGH);
+		M_GPIO_Set(su3,LOW);
+		M_GPIO_Set(su6,HIGH);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,HIGH);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,HIGH);
+			
+		M_Delay_ms(5);//3
+		M_GPIO_Set(su1,HIGH);
+		M_GPIO_Set(su4,LOW);
+		M_GPIO_Set(su5,low);
+		
+		M_GPIO_Set(su2,HIGH);
+		M_GPIO_Set(su3,HIGH);
+		M_GPIO_Set(su6,LOW);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,HIGH);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,HIGH);
+		
+		
+		M_Delay_ms(5);//5
+	}
+		
+		for(j=0;j<67;j++)
+		{
+		M_GPIO_Set(su1,HIGH);
+		M_GPIO_Set(su4,LOW);
+		M_GPIO_Set(su5,low);
+		
+		M_GPIO_Set(su2,HIGH);
+		M_GPIO_Set(su3,HIGH);
+		M_GPIO_Set(su6,LOW);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,HIGH);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,HIGH);
+		
+		
+		M_Delay_ms(5);//5
+			
+		M_GPIO_Set(su1,LOW);
+		M_GPIO_Set(su4,HIGH);
+		M_GPIO_Set(su5,HIGH);
+		
+		M_GPIO_Set(su2,HIGH);
+		M_GPIO_Set(su3,LOW);
+		M_GPIO_Set(su6,HIGH);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,HIGH);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,HIGH);
+		
+		
+		M_Delay_ms(5);//3
+			
+	 
+		
+		
+		M_GPIO_Set(su1,HIGH);
+		M_GPIO_Set(su4,HIGH);
+		M_GPIO_Set(su5,LOW);
+		
+		M_GPIO_Set(su2,LOW);
+		M_GPIO_Set(su3,LOW);
+		M_GPIO_Set(su6,HIGH);
+		
+		M_GPIO_Set(sd1,LOW);
+		M_GPIO_Set(sd2,LOW);
+		M_GPIO_Set(sd3,LOW);
+		M_GPIO_Set(sd4,HIGH);
+		M_GPIO_Set(sd5,LOW);
+		
+		M_Delay_ms(5);//1
+		
+		
+		
+		}
+	}
+	
+}
+
+

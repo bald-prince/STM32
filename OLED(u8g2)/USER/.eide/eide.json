@@ -1,0 +1,391 @@
+{
+  "name": "OLED",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "CORE",
+        "files": [
+          {
+            "path": "../CORE/cmsis_armcc.h"
+          },
+          {
+            "path": "../CORE/core_cm4.h"
+          },
+          {
+            "path": "../CORE/core_cmFunc.h"
+          },
+          {
+            "path": "../CORE/core_cmInstr.h"
+          },
+          {
+            "path": "../CORE/core_cmSimd.h"
+          },
+          {
+            "path": "../CORE/startup_stm32f407xx.s"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "HALLIB",
+        "files": [
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c"
+          },
+          {
+            "path": "../HALLIB/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "HARDWARE",
+        "files": [
+          {
+            "path": "../HARDWARE/KEY/key.c"
+          },
+          {
+            "path": "../HARDWARE/LED/led.c"
+          },
+          {
+            "path": "../HARDWARE/OLED/oled.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "QRCODE",
+        "files": [
+          {
+            "path": "../HARDWARE/QRCODE/bitstream.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/mask.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/mmask.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/mqrspec.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/QR_Encode.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/qrencode.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/qrinput.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/qrspec.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/rscode.c"
+          },
+          {
+            "path": "../HARDWARE/QRCODE/split.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "README",
+        "files": [],
+        "folders": []
+      },
+      {
+        "name": "SYSTEM",
+        "files": [
+          {
+            "path": "../SYSTEM/delay/delay.c"
+          },
+          {
+            "path": "../SYSTEM/sys/sys.c"
+          },
+          {
+            "path": "../SYSTEM/usart/usart.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "u8g2",
+        "files": [
+          {
+            "path": "../u8g2/u8g2_bitmap.c"
+          },
+          {
+            "path": "../u8g2/u8g2_box.c"
+          },
+          {
+            "path": "../u8g2/u8g2_buffer.c"
+          },
+          {
+            "path": "../u8g2/u8g2_circle.c"
+          },
+          {
+            "path": "../u8g2/u8g2_cleardisplay.c"
+          },
+          {
+            "path": "../u8g2/u8g2_d_memory.c"
+          },
+          {
+            "path": "../u8g2/u8g2_d_setup.c"
+          },
+          {
+            "path": "../u8g2/u8g2_font.c"
+          },
+          {
+            "path": "../u8g2/u8g2_fonts.c"
+          },
+          {
+            "path": "../u8g2/u8g2_hvline.c"
+          },
+          {
+            "path": "../u8g2/u8g2_input_value.c"
+          },
+          {
+            "path": "../u8g2/u8g2_intersection.c"
+          },
+          {
+            "path": "../u8g2/u8g2_kerning.c"
+          },
+          {
+            "path": "../u8g2/u8g2_line.c"
+          },
+          {
+            "path": "../u8g2/u8g2_ll_hvline.c"
+          },
+          {
+            "path": "../u8g2/u8g2_message.c"
+          },
+          {
+            "path": "../u8g2/u8g2_polygon.c"
+          },
+          {
+            "path": "../u8g2/u8g2_selection_list.c"
+          },
+          {
+            "path": "../u8g2/u8g2_setup.c"
+          },
+          {
+            "path": "../u8g2/u8log_u8g2.c"
+          },
+          {
+            "path": "../u8g2/u8log_u8x8.c"
+          },
+          {
+            "path": "../u8g2/u8log.c"
+          },
+          {
+            "path": "../u8g2/u8x8_8x8.c"
+          },
+          {
+            "path": "../u8g2/u8x8_byte.c"
+          },
+          {
+            "path": "../u8g2/u8x8_cad.c"
+          },
+          {
+            "path": "../u8g2/u8x8_capture.c"
+          },
+          {
+            "path": "../u8g2/u8x8_d_ssd1306_128x64_noname.c"
+          },
+          {
+            "path": "../u8g2/u8x8_debounce.c"
+          },
+          {
+            "path": "../u8g2/u8x8_display.c"
+          },
+          {
+            "path": "../u8g2/u8x8_fonts.c"
+          },
+          {
+            "path": "../u8g2/u8x8_gpio.c"
+          },
+          {
+            "path": "../u8g2/u8x8_input_value.c"
+          },
+          {
+            "path": "../u8g2/u8x8_message.c"
+          },
+          {
+            "path": "../u8g2/u8x8_selection_list.c"
+          },
+          {
+            "path": "../u8g2/u8x8_setup.c"
+          },
+          {
+            "path": "../u8g2/u8x8_string.c"
+          },
+          {
+            "path": "../u8g2/u8x8_u16toa.c"
+          },
+          {
+            "path": "../u8g2/u8x8_u8toa.c"
+          }
+        ],
+        "folders": []
+      },
+      {
+        "name": "USER",
+        "files": [
+          {
+            "path": "main.c"
+          },
+          {
+            "path": "stm32f4xx_hal_msp.c"
+          },
+          {
+            "path": "stm32f4xx_it.c"
+          },
+          {
+            "path": "system_stm32f4xx.c"
+          }
+        ],
+        "folders": []
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": "STM32F407ZETx",
+  "packDir": ".pack/Keil/STM32F4xx_DFP.2.14.0",
+  "miscInfo": {
+    "uid": "26d30e0f3bd3f900b0e58420640abef6"
+  },
+  "targets": {
+    "OLED": {
+      "excludeList": [],
+      "toolchain": "AC5",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "none",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x5000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x08000000",
+                "size": "0x10000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "STLink",
+      "uploadConfig": {
+        "bin": ".\\build\\OLED\\OLED.hex",
+        "proType": "SWD",
+        "resetMode": "default",
+        "runAfterProgram": true,
+        "speed": 4000,
+        "address": "0x08000000",
+        "elFile": "None",
+        "optionBytes": ".eide/oled.st.option.bytes.ini",
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../CORE",
+          "../OBJ",
+          ".",
+          "../SYSTEM/delay",
+          "../SYSTEM/sys",
+          "../SYSTEM/usart",
+          "../HALLIB/STM32F4xx_HAL_Driver/Inc",
+          "../HARDWARE/LED",
+          "../HARDWARE/KEY",
+          "../HARDWARE/OLED",
+          "../HARDWARE/QRCODE",
+          "../u8g2",
+          "RTE/_OLED"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32F407xx",
+          "HSE_VALUE=8000000"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}

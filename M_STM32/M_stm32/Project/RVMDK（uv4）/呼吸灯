@@ -1,0 +1,25 @@
+#include "stm32f10x.h"
+
+int main(void)
+{	
+  int i;
+	M_SysTick_Init();
+	M_PWM_Init(A1,2000,0);
+	
+	while(1)
+	{
+		for(i=0;i<=100;i++)
+		{
+		M_PWM_Duty(A1,2000,i);
+		M_Delay_ms(10);
+		}
+		
+		for(i=100;i>0;i--)
+		{
+		M_PWM_Duty(A1,2000,i);
+		M_Delay_ms(10);
+		}
+				
+	}
+		
+	}

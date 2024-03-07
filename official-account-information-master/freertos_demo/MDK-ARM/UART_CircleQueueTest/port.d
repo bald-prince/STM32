@@ -1,0 +1,12 @@
+uart_circlequeuetest\port.o: ..\Freertos\portable\port.c
+uart_circlequeuetest\port.o: ..\Freertos\include\FreeRTOS.h
+uart_circlequeuetest\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+uart_circlequeuetest\port.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+uart_circlequeuetest\port.o: ..\Freertos\source\FreeRTOSConfig.h
+uart_circlequeuetest\port.o: ..\Freertos\include\projdefs.h
+uart_circlequeuetest\port.o: ..\Freertos\include\portable.h
+uart_circlequeuetest\port.o: ..\Freertos\include\deprecated_definitions.h
+uart_circlequeuetest\port.o: ..\Freertos\portable\portmacro.h
+uart_circlequeuetest\port.o: ..\Freertos\include\mpu_wrappers.h
+uart_circlequeuetest\port.o: ..\Freertos\include\task.h
+uart_circlequeuetest\port.o: ..\Freertos\include\list.h
